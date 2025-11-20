@@ -1,0 +1,60 @@
+@mixin mQ($rem) {
+  @media screen and (min-width: $rem) {
+    @content;
+  }
+}
+
+.card-why {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4f46e5;
+    transition: 0.6s;
+    z-index: 0;
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  &:hover::before {
+    clip-path: circle(150% at 50% 50%);
+  }
+
+  &:hover p {
+    color: #fff;
+  }
+}
+
+.circle {
+  @include mQ(62.5rem) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
+/* Background Images */
+
+.card-why:nth-child(1) .circle {
+  background: url("https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071&auto=format&fit=crop") 
+    no-repeat 50% 50% / cover;
+}
+
+.card-why:nth-child(2) .circle {
+  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop") 
+    no-repeat 50% 50% / cover;
+}
+
+.card-why:nth-child(3) .circle {
+  background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop") 
+    no-repeat 50% 50% / cover;
+}
+
+.card-why:nth-child(4) .circle {
+  background: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop") 
+    no-repeat 50% 50% / cover;
+}
