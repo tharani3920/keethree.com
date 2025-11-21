@@ -33489,7 +33489,60 @@ marquee.header-notice {
   clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
 }
 
-
+.theme-btn.btn-one {
+    color: #fff !important;
+}
+.theme-btn.btn-one {
+    background-color: #4fb5d5;
+}
+.btnimgV {
+    background-image: url(../images/btnIMG.png);
+    background-size: cover;
+    transition: none;
+}
+.theme-btn {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 17px;
+    line-height: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px 34px;
+    border-radius: 10px;
+    z-index: 1;
+    transition: all 500ms 
+ease;
+}
+.theme-btn:before {
+    webkit-transition-duration: 800ms;
+    transition-duration: 800ms;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    content: "";
+    top: 110%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+#video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+a.theme-btn.btn-one.btnimgV:hover  #video {
+    display: inline-block;
+}
 @media (max-width: 1199px) {
     .faq-img6 {
         margin-top: 50px
